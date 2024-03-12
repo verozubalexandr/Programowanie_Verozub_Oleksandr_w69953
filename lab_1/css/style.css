@@ -1,5 +1,41 @@
 table, th, td {
+    margin: 0;
+    padding: 0;
+    border-collapse: collapse;
     border: 1px solid black;
     text-align: center;
-    padding: 5px;
+}
+
+.study_table, td{
+    padding: 10px;
+}
+
+.task_table {
+    margin: 7px auto;
+    height: 100px;
+    width: 100px;
+}
+
+.task_header {
+    margin: 0;
+    text-align: center;
+}
+
+.main_img {
+    display: block;
+    width: 90px;
+}
+
+h1 {
+    display: block;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+label {
+    display: block;
 }
