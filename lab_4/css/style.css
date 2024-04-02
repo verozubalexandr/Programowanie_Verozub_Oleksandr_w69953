@@ -1,0 +1,204 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    box-sizing: border-box;
+}
+
+.task_title {
+    text-align: center;
+    font-size: 30px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 40px;
+    text-transform: uppercase;
+    margin: 10px 0 30px;
+}
+
+section {
+    min-height: 150px;
+}
+
+.task_1_btn, .task_2_btn, .fourth_task_btn, .fifth_task_btn, .sixth_task_btn, .seventh_task_btn, .eighth_task_btn, .ninth_task_btn {
+    display: block;
+    padding-right: 8px;
+    padding-left: 8px;
+    margin: 35px auto;
+    min-width: 100px;
+    height: 30px;
+    font-size: 15px;
+    background-color: #fff;
+    border: 1px solid #000000;
+    border-radius: 8px;
+    text-transform: uppercase;
+    transition: .2s all;
+} 
+
+.fourth_task_wrapper {
+    width: 350px;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.task_1_btn:hover {
+    border-radius: 14px;
+    cursor: pointer;
+}
+
+.task_2_btn:hover {
+    border-radius: 14px;
+    cursor: pointer;
+}
+
+.fourth_task_btn:hover {
+    border-radius: 14px;
+    cursor: pointer;
+}
+
+.fifth_task_btn:hover {
+    border-radius: 14px;
+    cursor: pointer;
+}
+
+.fifth_task_btn {
+    margin-bottom: 27px;
+}
+
+.sixth_task_btn {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.sixth_task_btn:hover {
+    border-radius: 14px;
+    cursor: pointer;
+}
+
+.seventh_task_btn:hover {
+    border-radius: 14px;
+    cursor: pointer;
+}
+
+.seventh_task_btn {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.eighth_task_btn {
+    margin-top: 10px;
+}
+
+.ninth_task_btn {
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.ninth_task_btn:hover {
+    border-radius: 14px;
+    cursor: pointer;
+}
+
+.eighth_task_btn:hover {
+    border-radius: 14px;
+    cursor: pointer;
+}
+
+.sixth_task_wrapper, .seventh_task_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+input {
+    height: 35px;
+    width: 300px;
+    border: 1px solid #000;
+    outline: none;
+    border-radius: 2px;
+    margin-top: 20px;
+}
+
+#sixth_task_list {
+    text-transform: capitalize;
+    margin-bottom: 22px;
+}
+
+td, th {
+    border: 1px solid black;
+    text-transform: capitalize;
+}
+
+table {
+    min-width: 350px;
+    margin-bottom: 30px;
+}
+
+.eighth_task, .ninth_task {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+}
+
+#celsius_input, #fahrenheit_input {
+    width: 65px;
+    height: 30px;
+}
+
+#celsius_output {
+    margin-bottom: 30px;
+}
+
+#ninth_task_num_1, #ninth_task_num_2 {
+    width: 160px;
+}
+
+#gcd_output {
+    margin-bottom: 25px;
+}
+
+.tenth_task {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+}
+
+
+.actions_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.action_btn {
+    width: 30px;
+    height: 30px;
+    font-size: 15px;
+    background-color: #fff;
+    border: 1px solid #000000;
+    border-radius: 50%;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+#tenth_task_num_1 {
+    margin-bottom: 10px;
+}
+
+#tenth_task_num_2 {
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+#tenth_task_result {
+    margin-bottom: 20px;
+}

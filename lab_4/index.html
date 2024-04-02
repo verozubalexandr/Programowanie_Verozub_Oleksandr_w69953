@@ -3,11 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <script src="js/script.js" defer></script>
-    <title>lab_4</title>
+    <title>Lab 4</title>
 </head>
 <body>
-    <input type="text" id="task_2_input" placeholder="num">
-    <div id="task_2_answer"></div>
+    <h1 id="main_title">Lab 4</h1>
+
+    <section class="first_task">
+        <h2 class="task_title">Task 1<br>(console)</h2>
+        <button class="task_1_btn" onclick="task1()">Check</button>
+    </section>
+
+    <section class="second_task">
+        <h2 class="task_title">Task 2</h2>
+        <button class="task_2_btn" onclick="task2()">Check</button>
+    </section>
+
+    <section class="fourth_task">
+        <h2 class="task_title">Task 4</h2>
+        <div class="fourth_task_wrapper">
+            <button class="fourth_task_btn" onclick="toggleColor(this)">Button</button>
+            <button class="fourth_task_btn" onclick="toggleColor(this)">Button</button>
+            <button class="fourth_task_btn" onclick="toggleColor(this)">Button</button>
+        </div>
+    </section>
+
+    <section class="fifth_task">
+        <h2 class="task_title">Task 5<br>(h1 title visibility)</h2>
+        <button class="fifth_task_btn" onclick="toggleTitleVisibility()">Toogle</button>
+    </section>
+
+    <section class="sixth_task">
+        <h2 class="task_title">Task 6</h2>
+        <div class="sixth_task_wrapper">
+            <input type="text" id="sixth_task_input">
+            <button class="sixth_task_btn" onclick="task6()">Add to list</button>
+            <ul id="sixth_task_list"></ul>
+        </div>
+    </section>
+
+    <section class="seventh_task">
+        <h2 class="task_title">Task 7</h2>
+        <div class="seventh_task_wrapper">
+            <input type="text" id="seventh_task_input_name">
+            <input type="text" id="seventh_task_input_surname">
+            <button class="seventh_task_btn" onclick="task7()">Add to table</button>
+            <table id="seventh_task_table">
+                <tr>
+                    <th>Name</th>
+                    <th>Surname</th>
+                </tr>
+            </table>
+        </div>
+    </section>
+
+    <section class="eighth_task">
+        <h2 class="task_title">Task 8</h2>
+        <input type="number" id="celsius_input" placeholder="°C">
+        <button class="eighth_task_btn" onclick="convertToFahrenheit()">Convert to Fahrenheit</button>
+        <div id="fahrenheit_output"></div>
+        <input type="number" id="fahrenheit_input" placeholder="°F">
+        <button class="eighth_task_btn" onclick="convertToCelsius()">Convert to Celsius</button>
+        <div id="celsius_output"></div>
+    </section>
+
+    <section class="ninth_task">
+        <h2 class="task_title">Task 9</h2>
+        <input type="text" id="ninth_task_num_1" placeholder="Enter first number">
+        <input type="text" id="ninth_task_num_2" placeholder="Enter second number">
+        <button class="ninth_task_btn" onclick="calculateGCD()">Calculate GCD</button>
+        <p id="gcd_output"></p>
+    </section>
+
+    <section class="tenth_task">
+        <h2 class="task_title">Task 10</h2>
+        <input type="text" id="tenth_task_num_1" placeholder="Enter first number">
+        <div class="actions_wrapper"> 
+            <button class="action_btn" onclick="add()">+</button>
+            <button class="action_btn" onclick="subtract()">-</button>
+            <button class="action_btn" onclick="multiply()">x</button>
+            <button class="action_btn" onclick="divide()">/</button>
+            <button class="action_btn" onclick="power()">^</button>
+        </div>
+        <input type="text" id="tenth_task_num_2" placeholder="Enter second number">
+        <p id="tenth_task_result"></p>
+    </section>
 </body>
 </html>
