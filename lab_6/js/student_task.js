@@ -17,4 +17,5 @@ const student = {
     }
 };
 
-(console.log("AVG MARK -> " + student.averageMark()))
+console.log("Task 2");
+console.log("Average mark -> " + student.averageMark().toFixed(2));
