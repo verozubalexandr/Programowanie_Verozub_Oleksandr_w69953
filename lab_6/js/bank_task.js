@@ -32,7 +32,7 @@ const myAccount = new BankAccount(230);
 
 
 /*****************************OUTPUTS******************************/
-console.log("Task 8")
+console.log("Task 8");
 console.log("Initial balance -> ", myAccount.getBalance());
 myAccount.deposit(20); 
 console.log("Current balance after deposit:", myAccount.getBalance());

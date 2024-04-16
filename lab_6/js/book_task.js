@@ -5,7 +5,7 @@ const book = {
 }
 
 function showBookInfo(book) {
-    console.log("Task 1")
+    console.log("Task 1");
     console.log(book.title + " - " + book.author + "(" + book.year + ")");
 }
 

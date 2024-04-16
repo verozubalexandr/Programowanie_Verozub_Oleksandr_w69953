@@ -9,6 +9,8 @@
     <script src="js/geometry_tasks.js" defer></script>
     <script src="js/car_task.js" defer></script>
     <script src="js/bank_task.js" defer></script>
+    <script src="js/employee_task.js" defer></script>
+    <script src="js/product_task.js" defer></script>
     <title>Lab 6</title>
 </head>
 <body>
@@ -18,7 +20,12 @@
     <label for="width">Width:</label>
     <input type="number" id="width"><br><br>
     <button onclick="createRectangle()">Create Rectangle</button><br><br>
-
     <div id="result"></div>
+
+    <h2>Task 9</h2>
+    <input type="file" id="fileInput" onchange="empManagement.loadFromJSON(event)">
+    
+    <h2>Task 10</h2>
+    <input type="file" id="fileInput" onchange="prodManagement.loadFromJSON(event)">
 </body>
 </html>

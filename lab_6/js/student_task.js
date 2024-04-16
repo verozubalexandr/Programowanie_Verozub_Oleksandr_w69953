@@ -1,3 +1,4 @@
+/************************Task 2*************************/
 const student = {
     firstName: "Jan",
     lastName: "Kowalski",
@@ -17,5 +18,8 @@ const student = {
     }
 };
 
+
+
+/**********************OUTPUTS*********************/
 console.log("Task 2");
 console.log("Average mark -> " + student.averageMark().toFixed(2));
