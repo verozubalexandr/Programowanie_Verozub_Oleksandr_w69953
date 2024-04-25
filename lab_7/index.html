@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/script.js" defer></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <title>Lab 7 - 8</title>
+</head>
+<body>
+    <h1>Lab 7 - 8</h1>
+    <section class="first_task_section">
+        <h2>Task 1</h2>
+        <form action="przetworz.php" class="first_task_form" method="post">
+            <div class="input_wrapper"> 
+                <label for="imie">Imię:</label>
+                <input type="text" id="imie" name="imie" placeholder="Name" pattern="[A-Za-z]{1,}" required>
+            </div>
+    
+            <div class="input_wrapper"> 
+                <label for="nazwisko">Nazwisko:</label>
+                <input type="text" id="nazwisko" name="nazwisko" placeholder="Surname" pattern="[A-Za-z]{1,}">
+            </div>
+    
+            <div class="input_wrapper">     
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="example@mail.com" required>
+            </div>
+    
+            <div class="input_wrapper"> 
+                <label for="haslo">Hasło:</label>
+                <input type="password" id="haslo" name="haslo" minlength="8" required>
+            </div>
+    
+            <div class="input_wrapper"> 
+                <label for="plec">Płeć:</label>
+                <select id="plec" name="plec" required>
+                    <option value="kobieta">Kobieta</option>
+                    <option value="mezczyzna">Mężczyzna</option>
+                    <option value="inne">Inne</option>
+                </select>
+            </div>
+    
+            <div class="input_wrapper"> 
+                <label for="telefon">Telefon:</label>
+                <input type="tel" id="telefon" placeholder="xxx-xxx-xxx" name="telefon" maxlength="9" pattern="[0-9]{9}" required>    
+            </div>
+    
+            <div class="input_wrapper"> 
+                <label for="data-urodzenia">Data urodzenia:</label>
+                <input type="date" id="data-urodzenia" name="data-urodzenia" required>
+            </div>
+    
+            <div class="input_wrapper"> 
+                <label for="kraj">Kraj:</label>
+                <input type="text" id="kraj" name="kraj" pattern="[A-Za-z]{1,}">
+            </div>
+    
+            <div class="input_wrapper"> 
+                <input type="submit" id="first_task_submit" value="Zarejestruj">
+            </div>
+        </form>
+    </section>
+</body>
+</html>

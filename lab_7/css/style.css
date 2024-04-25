@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    box-sizing: border-box;
+}
+
+h1 {
+    margin-top: 35px;
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    font-weight: 300;
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+
+.first_task_section {
+    margin: 35px auto;
+    width: 700px;
+    height: 600px;
+    border: 1px solid #000;
+    border-radius: 10px;
+}
+
+.first_task_form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.input_wrapper {
+    width: 500px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.input_wrapper > label {
+    width: 140px;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.input_wrapper > input {
+    width: 250px;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 300;
+    outline: none;
+    border: 1px solid #000;
+    transition: .2s all;
+    padding-left: 8px;
+}
+
+.input_wrapper > #first_task_submit {
+    display: block;
+    margin: 0 auto;
+    width: 130px;
+    background-color: #ffffff00;
+    transition: .2s all;
+    border-radius: 13px;
+    padding: 0;
+    margin-top: 30px;
+    user-select: none;
+}
+
+#first_task_submit:hover{
+    cursor: pointer;
+    border-radius: 20px;
+    background-color: #000000;
+    color: #fff;
+}
+
+.input_wrapper > select {
+    width: 250px;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 300;
+    outline: none;
+    border: 1px solid #000;
+    transition: .2s all;
+}
