@@ -28,7 +28,7 @@ h2 {
 }
 
 .first_five_task_section {
-    height: 650px;
+    height: 850px;
 }
 
 .first_task_form, .first_five_task_form {
@@ -94,4 +94,8 @@ h2 {
     color: red;
     padding: 0 10px;
     text-align: center;
+}
+
+#korespondencyjny {
+    height: 20px;
 }

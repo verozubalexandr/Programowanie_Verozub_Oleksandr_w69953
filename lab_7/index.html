@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="js/script.js" defer></script>
+    <script src="js/quiz.js" defer></script>
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -66,7 +67,7 @@
     </section>
 
     <section class="first_five_task_section">
-        <h2>Task 2-5</h2>
+        <h2>Task 2-8</h2>
         <form action="#" class="first_five_task_form" method="post">
             <div class="input_wrapper"> 
                 <label for="imie2">Imię:</label>
@@ -118,12 +119,38 @@
                 <label for="data-urodzenia2">Data urodzenia:</label>
                 <input type="date" id="data-urodzenia2" name="data-urodzenia" required>
                 <p id="dobError" class="error-message"></p>
-            </div>            
+            </div> 
             
             <div class="input_wrapper"> 
-                <label for="kraj2">Kraj:</label>
-                <input type="text" id="kraj2" name="kraj" pattern="[A-Za-z]{1,}">
+                <label for="kraj2">Country:</label>
+                <select id="kraj2" name="kraj" required onchange="updateVoivodeshipField()">
+                    <option value="poland">Poland</option>
+                    <option value="other">Other</option>
+                    <option value="-" selected="selected">None</option>
+                </select>
                 <p id="countryError" class="error-message"></p>
+            </div>
+            
+            <div class="input_wrapper"> 
+                <label for="wojewodztwo">Voivodeship:</label>
+                <input type="text" id="wojewodztwo-input" name = 'wojewodztwo' placeholder = 'Voivodeship' disabled oninput="toggleAddressInput()">
+                <select id="wojewodztwo" name="wojewodztwo" disabled>
+                </select>
+            </div>
+            
+            <div class="input_wrapper"> 
+                <label for="adres">Address:</label>
+                <input type="text" id="adres" name="adres" disabled>
+            </div>
+
+            <div class="input_wrapper" id="correspondenceAddressWrapper"> 
+                <label for="korespondencyjny">Mailing address same as main:</label>
+                <input type="checkbox" id="korespondencyjny" name="korespondencyjny" checked>
+            </div>
+            
+            <div class="input_wrapper" id="input_mailing_address" style="display: none;">
+                <label for="korespondencyjny">Mailing Address:</label>
+                <input type="text" id="adresKorespondencyjny" name="adresKorespondencyjny" placeholder="Correspondence Address" disabled>
             </div>
 
             <div class="input_wrapper"> 
@@ -131,5 +158,19 @@
             </div>
         </form>
     </section>
+
+
+    <section class="quiz_task">
+        <form id="quizForm">
+            <label for="question">Treść pytania:</label><br>
+            <input type="text" id="question" name="question"><br>
+            <label for="answer">Odpowiedź:</label><br>
+            <input type="text" id="answer" name="answer"><br><br>
+            <button type="button" onclick="addQuestion()">Dodaj pytanie</button>
+        </form>
+
+        <div id="questionList"></div>
+    </section>
+    
 </body>
 </html>
