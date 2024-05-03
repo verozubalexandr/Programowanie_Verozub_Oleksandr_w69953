@@ -14,30 +14,30 @@
     <h1>Lab 7 - 8</h1>
     <section class="first_task_section">
         <h2>Task 1</h2>
-        <form action="przetworz.php" class="first_task_form" method="post">
+        <form action="#" class="first_task_form" method="post">
             <div class="input_wrapper"> 
-                <label for="imie">Imię:</label>
-                <input type="text" id="imie" name="imie" placeholder="Name" pattern="[A-Za-z]{1,}" required>
+                <label for="imie1">Imię:</label>
+                <input type="text" id="imie1" name="imie" placeholder="Name" pattern="[A-Za-z]{1,}" required>
             </div>
     
             <div class="input_wrapper"> 
-                <label for="nazwisko">Nazwisko:</label>
-                <input type="text" id="nazwisko" name="nazwisko" placeholder="Surname" pattern="[A-Za-z]{1,}">
+                <label for="nazwisko1">Nazwisko:</label>
+                <input type="text" id="nazwisko1" name="nazwisko" placeholder="Surname" pattern="[A-Za-z]{1,}">
             </div>
     
             <div class="input_wrapper">     
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" placeholder="example@mail.com" required>
+                <label for="email1">Email:</label>
+                <input type="email" id="email1" name="email" placeholder="example@mail.com" required>
             </div>
     
             <div class="input_wrapper"> 
-                <label for="haslo">Hasło:</label>
-                <input type="password" id="haslo" name="haslo" minlength="8" required>
+                <label for="haslo1">Hasło:</label>
+                <input type="password" id="haslo1" name="haslo" minlength="8" required>
             </div>
     
             <div class="input_wrapper"> 
-                <label for="plec">Płeć:</label>
-                <select id="plec" name="plec" required>
+                <label for="plec1">Płeć:</label>
+                <select id="plec1" name="plec" required>
                     <option value="kobieta">Kobieta</option>
                     <option value="mezczyzna">Mężczyzna</option>
                     <option value="inne">Inne</option>
@@ -45,22 +45,89 @@
             </div>
     
             <div class="input_wrapper"> 
-                <label for="telefon">Telefon:</label>
-                <input type="tel" id="telefon" placeholder="xxx-xxx-xxx" name="telefon" maxlength="9" pattern="[0-9]{9}" required>    
+                <label for="telefon1">Telefon:</label>
+                <input type="tel" id="telefon1" placeholder="xxx-xxx-xxx" name="telefon" maxlength="9" pattern="[0-9]{9}" required>    
             </div>
     
             <div class="input_wrapper"> 
-                <label for="data-urodzenia">Data urodzenia:</label>
-                <input type="date" id="data-urodzenia" name="data-urodzenia" required>
+                <label for="data-urodzenia1">Data urodzenia:</label>
+                <input type="date" id="data-urodzenia1" name="data-urodzenia" required>
             </div>
     
             <div class="input_wrapper"> 
-                <label for="kraj">Kraj:</label>
-                <input type="text" id="kraj" name="kraj" pattern="[A-Za-z]{1,}">
+                <label for="kraj1">Kraj:</label>
+                <input type="text" id="kraj1" name="kraj" pattern="[A-Za-z]{1,}">
             </div>
     
             <div class="input_wrapper"> 
-                <input type="submit" id="first_task_submit" value="Zarejestruj">
+                <input type="submit" id="first_task_submit1" value="Zarejestruj">
+            </div>
+        </form>
+    </section>
+
+    <section class="first_five_task_section">
+        <h2>Task 2-5</h2>
+        <form action="#" class="first_five_task_form" method="post">
+            <div class="input_wrapper"> 
+                <label for="imie2">Imię:</label>
+                <input type="text" id="imie2" name="imie" placeholder="Name" pattern="[A-Za-z]{1,}" required>
+                <p id="nameError" class="error-message"></p>
+            </div>
+            
+            <div class="input_wrapper"> 
+                <label for="nazwisko2">Nazwisko:</label>
+                <input type="text" id="nazwisko2" name="nazwisko" placeholder="Surname" pattern="[A-Za-z]{1,}">
+                <p id="surnameError" class="error-message"></p>
+            </div>
+            
+            <div class="input_wrapper">     
+                <label for="email2">Email:</label>
+                <input type="email" id="email2" name="email" placeholder="example@mail.com" required>
+                <p id="emailError" class="error-message"></p>
+            </div>
+            
+            <div class="input_wrapper"> 
+                <label for="haslo2">Hasło:</label>
+                <input type="password" id="haslo2" name="haslo" minlength="8" required oninput="validatePasswordMatch()">
+                <p id="passwordError" class="error-message"></p>
+            </div>
+            
+            <div class="input_wrapper">
+                <label for="powtorz-haslo2">Powtórz hasło:</label>
+                <input type="password" id="powtorz-haslo2" name="powtorz-haslo" minlength="8" required oninput="validatePasswordMatch()">
+                <p id="passwordMatchError2" class="error-message"></p>
+            </div>                
+            
+            <div class="input_wrapper"> 
+                <label for="plec2">Płeć:</label>
+                <select id="plec2" name="plec" required>
+                    <option value="kobieta">Kobieta</option>
+                    <option value="mezczyzna">Mężczyzna</option>
+                    <option value="inne">Inne</option>
+                </select>
+                <p id="genderError" class="error-message"></p>
+            </div>
+            
+            <div class="input_wrapper"> 
+                <label for="telefon2">Telefon:</label>
+                <input type="tel" id="telefon2" placeholder="xxx-xxx-xxx" name="telefon" maxlength="9" pattern="[0-9]{9}" required>    
+                <p id="phoneError" class="error-message"></p>
+            </div>
+            
+            <div class="input_wrapper"> 
+                <label for="data-urodzenia2">Data urodzenia:</label>
+                <input type="date" id="data-urodzenia2" name="data-urodzenia" required>
+                <p id="dobError" class="error-message"></p>
+            </div>            
+            
+            <div class="input_wrapper"> 
+                <label for="kraj2">Kraj:</label>
+                <input type="text" id="kraj2" name="kraj" pattern="[A-Za-z]{1,}">
+                <p id="countryError" class="error-message"></p>
+            </div>
+
+            <div class="input_wrapper"> 
+                <input type="submit" id="first_task_submit2" value="Zarejestruj" onclick="return validateForm(event)">
             </div>
         </form>
     </section>

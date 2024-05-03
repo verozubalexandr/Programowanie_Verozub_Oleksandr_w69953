@@ -19,7 +19,7 @@ h2 {
     margin-bottom: 35px;
 }
 
-.first_task_section {
+.first_task_section, .first_five_task_section {
     margin: 35px auto;
     width: 700px;
     height: 600px;
@@ -27,7 +27,11 @@ h2 {
     border-radius: 10px;
 }
 
-.first_task_form {
+.first_five_task_section {
+    height: 650px;
+}
+
+.first_task_form, .first_five_task_form {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -35,6 +39,7 @@ h2 {
 }
 
 .input_wrapper {
+    position: relative;
     width: 500px;
     height: 50px;
     display: flex;
@@ -48,7 +53,7 @@ h2 {
     font-weight: 300;
 }
 
-.input_wrapper > input {
+.input_wrapper > input, .input_wrapper > select {
     width: 250px;
     height: 40px;
     border-radius: 5px;
@@ -60,7 +65,7 @@ h2 {
     padding-left: 8px;
 }
 
-.input_wrapper > #first_task_submit {
+.input_wrapper > #first_task_submit1, #first_task_submit2 {
     display: block;
     margin: 0 auto;
     width: 130px;
@@ -72,20 +77,21 @@ h2 {
     user-select: none;
 }
 
-#first_task_submit:hover{
+#first_task_submit1:hover, #first_task_submit2:hover {
     cursor: pointer;
     border-radius: 20px;
     background-color: #000000;
     color: #fff;
 }
 
-.input_wrapper > select {
-    width: 250px;
-    height: 40px;
-    border-radius: 5px;
-    font-size: 18px;
-    font-weight: 300;
-    outline: none;
-    border: 1px solid #000;
-    transition: .2s all;
+.error-message {
+    position: absolute;
+    top: 13px;
+    right: -100px;
+    font-weight: 100;
+    width: 100px;
+    font-size: 10px;
+    color: red;
+    padding: 0 10px;
+    text-align: center;
 }
