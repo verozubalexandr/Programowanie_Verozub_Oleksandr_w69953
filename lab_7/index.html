@@ -3,19 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="js/script.js" defer></script>
+    <script src="js/forms.js" defer></script>
     <script src="js/quiz.js" defer></script>
+    <script src="js/phone_task.js" defer></script>
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <title>Lab 7 - 8</title>
 </head>
+
 <body>
     <h1>Lab 7 - 8</h1>
+
     <section class="first_task_section">
+
         <h2>Task 1</h2>
+
         <form action="#" class="first_task_form" method="post">
+
             <div class="input_wrapper"> 
                 <label for="imie1">Imię:</label>
                 <input type="text" id="imie1" name="imie" placeholder="Name" pattern="[A-Za-z]{1,}" required>
@@ -63,12 +69,17 @@
             <div class="input_wrapper"> 
                 <input type="submit" id="first_task_submit1" value="Zarejestruj">
             </div>
+
         </form>
+
     </section>
 
     <section class="first_five_task_section">
+
         <h2>Task 2-8</h2>
+
         <form action="#" class="first_five_task_form" method="post">
+
             <div class="input_wrapper"> 
                 <label for="imie2">Imię:</label>
                 <input type="text" id="imie2" name="imie" placeholder="Name" pattern="[A-Za-z]{1,}" required>
@@ -122,7 +133,7 @@
             </div> 
             
             <div class="input_wrapper"> 
-                <label for="kraj2">Country:</label>
+                <label for="kraj2">Kraj:</label>
                 <select id="kraj2" name="kraj" required onchange="updateVoivodeshipField()">
                     <option value="poland">Poland</option>
                     <option value="other">Other</option>
@@ -132,45 +143,102 @@
             </div>
             
             <div class="input_wrapper"> 
-                <label for="wojewodztwo">Voivodeship:</label>
-                <input type="text" id="wojewodztwo-input" name = 'wojewodztwo' placeholder = 'Voivodeship' disabled oninput="toggleAddressInput()">
+                <label for="wojewodztwo">Województwo:</label>
+                <input type="text" id="wojewodztwo-input" name = 'wojewodztwo' placeholder = 'Województwo' disabled oninput="toggleAddressInput()">
                 <select id="wojewodztwo" name="wojewodztwo" disabled>
                 </select>
             </div>
             
             <div class="input_wrapper"> 
-                <label for="adres">Address:</label>
+                <label for="adres">Adres:</label>
                 <input type="text" id="adres" name="adres" disabled>
             </div>
 
-            <div class="input_wrapper" id="correspondenceAddressWrapper"> 
-                <label for="korespondencyjny">Mailing address same as main:</label>
+            <div class="input_wrapper" id="correspondenceAddressWrapper" style="margin-top: 14px; margin-bottom: 10px;"> 
+                <label for="korespondencyjny">Korespondencyjny taki sam jak zamieszkania:</label>
                 <input type="checkbox" id="korespondencyjny" name="korespondencyjny" checked>
             </div>
             
             <div class="input_wrapper" id="input_mailing_address" style="display: none;">
-                <label for="korespondencyjny">Mailing Address:</label>
-                <input type="text" id="adresKorespondencyjny" name="adresKorespondencyjny" placeholder="Correspondence Address" disabled>
+                <label for="korespondencyjny">Adres korespondencyjny:</label>
+                <input type="text" id="adresKorespondencyjny" name="adresKorespondencyjny" placeholder="Adres korespondencyjny" disabled>
             </div>
 
             <div class="input_wrapper"> 
                 <input type="submit" id="first_task_submit2" value="Zarejestruj" onclick="return validateForm(event)">
             </div>
+
         </form>
+
     </section>
 
+    <section class="phone_task_section">
 
-    <section class="quiz_task">
-        <form id="quizForm">
-            <label for="question">Treść pytania:</label><br>
-            <input type="text" id="question" name="question"><br>
-            <label for="answer">Odpowiedź:</label><br>
-            <input type="text" id="answer" name="answer"><br><br>
-            <button type="button" onclick="addQuestion()">Dodaj pytanie</button>
+        <h2>Task 9</h2>
+
+        <form id="contact-form">
+
+            <div class="input_wrapper">
+                <label for="first-name">Imię:</label>
+                <input type="text" id="first-name" required>
+            </div>
+
+            <div class="input_wrapper">
+                <label for="last-name">Nazwisko:</label>
+                <input type="text" id="last-name">
+            </div>
+
+            <div class="input_wrapper">
+                <label for="phone-number">Telefon:</label>
+                <input type="text" id="phone-number" oninput="limitPhoneToDigits(event)" pattern="[0-9]{9}" maxlength="9" required>
+            </div>
+           
+            <div class="input_wrapper">
+                <button type="submit" class="add_contact_btn">Zarejestruj</button>
+            </div>
+
         </form>
 
-        <div id="questionList"></div>
+        <table id="contact-table">
+            <thead>
+                <tr>
+                    <th>Imię</th>
+                    <th>Nazwisko</th>
+                    <th>Telefon</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+
+    </section>
+
+    <section class="quiz_task_section">
+
+        <h2>Task 10</h2>
+
+        <form class="quiz_form" id="quiz-form">
+
+            <div class="input_wrapper">
+                <label for="question">Treść pytania:</label><br>
+                <input type="text" id="question" name="question"><br>
+            </div>
+
+            <div class="input_wrapper">
+                <label for="answer">Odpowiedź:</label><br>
+                <input type="text" id="answer" name="answer"><br><br>
+            </div>
+
+            <div class="input_wrapper">
+                <button class="add_question_btn" type="button" onclick="addQuestion()">Dodaj pytanie</button>
+            </div>
+
+        </form>
+
+        <div id="question-list"></div>
+
     </section>
     
 </body>
+
 </html>

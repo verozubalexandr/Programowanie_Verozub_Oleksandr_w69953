@@ -15,7 +15,7 @@ class Quiz {
     }
 
     wyswietlPytania() {
-        const questionList = document.getElementById('questionList');
+        const questionList = document.getElementById('question-list');
         questionList.innerHTML = '';
         this.pytania.forEach((pytanie, index) => {
             const questionItem = document.createElement('div');
@@ -35,7 +35,7 @@ function addQuestion() {
         const pytanie = new Pytanie(questionInput, answerInput);
         quiz.dodajPytanie(pytanie);
         quiz.wyswietlPytania();
-        document.getElementById('quizForm').reset();
+        document.getElementById('quiz-form').reset();
     } else {
         alert('Wpisz treść pytania oraz odpowiedź.');
     }

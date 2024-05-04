@@ -31,7 +31,82 @@ h2 {
     height: 850px;
 }
 
-.first_task_form, .first_five_task_form {
+.phone_task_section {
+    margin: 35px auto;
+    width: 700px;
+    min-height: 340px;
+    border: 1px solid #000;
+    border-radius: 10px;
+}
+
+.quiz_task_section {
+    margin: 35px auto;
+    width: 700px;
+    min-height: 340px;
+    border: 1px solid #000;
+    border-radius: 10px;
+}
+
+.add_question_btn, .add_contact_btn {
+    display: block;
+    margin: 0 auto;
+    width: 130px;
+    height: 40px;
+    background-color: #ffffff00;
+    transition: .2s all;
+    border-radius: 13px;
+    padding: 0;
+    margin-top: 30px;
+    user-select: none;
+    font-size: 18px;
+    font-weight: 300;
+    outline: none;
+    border: 1px solid #000;
+    transition: .2s all;
+}
+
+.add_question_btn:hover {
+    cursor: pointer;
+    border-radius: 20px;
+    background-color: #000000;
+    color: #fff;
+}
+
+.add_contact_btn:hover {
+    cursor: pointer;
+    border-radius: 20px;
+    background-color: #000000;
+    color: #fff;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 35px;
+}
+
+th, td {
+    border: 1px solid #000000;
+    text-align: left;
+    padding: 8px;
+}
+
+th {
+    background-color: #ffffff;
+}
+
+#question-list {
+    text-align: center;
+    margin-top: 30px;
+}
+
+#question-list > div {
+    font-weight: 300;
+    margin-top: 5px;
+}
+
+.first_task_form, .first_five_task_form, .quiz_form, #contact-form {
     display: flex;
     align-items: center;
     justify-content: center;
